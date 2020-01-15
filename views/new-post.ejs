@@ -1,0 +1,11 @@
+<%-contentFor('title') %>New POST
+<%- contentFor('body') %>
+<form method="post" action="/new-post">
+    <labal for="from">From:</labal><br/>
+    <input type="text" id="from" name="from" required><br/>
+    <labal for="title">Title:</labal><br/>
+    <input type="text" id="title" name="title" required><br/>
+    <labal for="full_text">Full text;</labal><br/>
+    <textarea id="full_text" name="full_text" rows="8" cols="80"></textarea><br/>
+    <button type="submit">Submit</button>
+</form>

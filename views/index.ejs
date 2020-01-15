@@ -1,3 +1,34 @@
-<%- contentFor('title') %>Home
+<%- contentFor('title') %> Leroy's Home
 <%- contentFor('body') %>
+
+
+<a href="/school">school </a>
+
 <h1>Hello Dynamic World!</h1>
+<a href="/new-post">Newpost</a>
+<p>name's Leroy</p>
+<ul>
+  <% for (let record of records) { %>
+    <li><%= record.title %></li>
+  <% } %>
+</ul>
+
+  <li><a href="/school?name=Leroy&lastname=Gil">Leroy V.B</a></li>
+  <li><a href="I am a Man">do you have the BALLS!</a></li>
+</ul>
+<form method="get" action="/school">
+  <labal for="name">Name (4 to 8 characters):</labal>
+  <input type="text" id="name" name="name" required
+        minlength="4" maxlength="8" size="10">
+  <labal for="lastname">Last Name:</labal>
+  <input type="text" id="name" name="lastname">
+  <button type="Submit">Submit</button>
+</form>
+<form method="POST" action="/school2">
+  <labal for="name">Name (4 to 8 characters):</labal>
+  <input type="text" id="name" name="name" required
+        minlength="4" maxlength="8" size="10">
+  <labal for="lastname">Last Name:</labal>
+  <input type="text" id="name" name="lastname">
+  <button type="Submit">Submit</button>
+</form>
